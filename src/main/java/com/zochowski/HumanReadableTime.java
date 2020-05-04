@@ -1,3 +1,5 @@
+package com.zochowski;
+
 public class HumanReadableTime {
     public static String makeReadable(int seconds) {
         int hours = seconds / 3600;

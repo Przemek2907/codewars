@@ -1,5 +1,5 @@
-import java.util.Comparator;
-import java.util.stream.Stream;
+package com.zochowski;
+
 
 public class TriplesAndDoubles {
 
