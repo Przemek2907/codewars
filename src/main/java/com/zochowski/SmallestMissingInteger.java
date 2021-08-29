@@ -28,15 +28,17 @@ public class SmallestMissingInteger {
     public Integer findSmallestPositiveIntegerFromArray(int[] A) {
         List<Integer> sortedListOfIntegers = Arrays.stream(A).sorted()
                 .boxed()
+                .filter(x -> x >=0)
                 .collect(Collectors.toList());
 
-        if (sortedListOfIntegers.get(sortedListOfIntegers.size()-1) < 0) {
-            return  1;
+        if (sortedListOfIntegers.size() == 0 || sortedListOfIntegers.get(sortedListOfIntegers.size()-1) < 0 || sortedListOfIntegers.get(0) > 1) {
+            return 1;
         }
+
 
         int result = 0;
         for (int i = 0; i < sortedListOfIntegers.size() - 1; i++) {
-            if (sortedListOfIntegers.get(i+1) - sortedListOfIntegers.get(i) == 2) {
+            if (sortedListOfIntegers.get(i+1) - sortedListOfIntegers.get(i) > 1) {
                 result = sortedListOfIntegers.get(i) + 1;
                 break;
             } else {
