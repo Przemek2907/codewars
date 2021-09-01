@@ -43,8 +43,14 @@ public class SmallestMissingIntegerTest {
     public void moreTests() {
         Assertions.assertEquals(1, smallestMissingInteger.findSmallestPositiveIntegerFromArray(new int[]{-1, 3, -6, 0, 7, 2}));
         Assertions.assertEquals(2, smallestMissingInteger.findSmallestPositiveIntegerFromArray(new int[]{0,1,0,1,0,30,1}));
-        Assertions.assertEquals(1, smallestMissingInteger.findSmallestPositiveIntegerFromArray(new int[]{235670, 34521, 56788, 34000, 45111,}));
+        Assertions.assertEquals(1, smallestMissingInteger.findSmallestPositiveIntegerFromArray(new int[]{235670, 34521, 56788, 34000, 45111}));
         Assertions.assertEquals(1, smallestMissingInteger.findSmallestPositiveIntegerFromArray(new int[]{-1,-1,-2,0,0,0}));
         Assertions.assertEquals(1, smallestMissingInteger.findSmallestPositiveIntegerFromArray(new int[]{999999, 1000000}));
+        Assertions.assertEquals(1, smallestMissingInteger.findSmallestPositiveIntegerFromArray(new int[]{-999999, 1000000}));
+        Assertions.assertEquals(2, smallestMissingInteger.findSmallestPositiveIntegerFromArray(new int[]{1, 500, 1000000}));
+        Assertions.assertEquals(1, smallestMissingInteger.findSmallestPositiveIntegerFromArray(new int[]{0}));
+        Assertions.assertEquals(1, smallestMissingInteger.findSmallestPositiveIntegerFromArray(new int[]{-3}));
+        Assertions.assertEquals(4, smallestMissingInteger.findSmallestPositiveIntegerFromArray(new int[]{1,2,3,11,20}));
+        Assertions.assertEquals(1, smallestMissingInteger.findSmallestPositiveIntegerFromArray(new int[]{}));
     }
 }

@@ -31,12 +31,12 @@ public class SmallestMissingInteger {
                 .filter(x -> x >=0)
                 .collect(Collectors.toList());
 
-        if (sortedListOfIntegers.size() == 0 || sortedListOfIntegers.get(sortedListOfIntegers.size()-1) < 0 || sortedListOfIntegers.get(0) > 1) {
+        if (sortedListOfIntegers.size() == 0 || sortedListOfIntegers.get(sortedListOfIntegers.size()-1) <= 0 || sortedListOfIntegers.get(0) > 1) {
             return 1;
         }
 
 
-        int result = 0;
+        int result = 1;
         for (int i = 0; i < sortedListOfIntegers.size() - 1; i++) {
             if (sortedListOfIntegers.get(i+1) - sortedListOfIntegers.get(i) > 1) {
                 result = sortedListOfIntegers.get(i) + 1;
